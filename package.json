@@ -1,5 +1,5 @@
 {
-	"name": "macos-cputemp",
+	"name": "cputemp-macos",
 	"version": "0.3.0",
 	"description":
 		"A MacOS  command line tool to read or log the cpu temperature 🌡",
@@ -7,7 +7,7 @@
 	"bin": {
 		"temp": "index.js"
 	},
-	"repository": "git@github.com:juliuscc/macos-cputemp.git",
+	"repository": "git@github.com:juliuscc/cputemp-macos.git",
 	"author": "Julius Recep Colliander Celik <julius.cc@hotmail.com>",
 	"license": "MIT",
 	"private": false,
