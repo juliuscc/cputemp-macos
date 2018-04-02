@@ -8,8 +8,8 @@ const { reset, limits } = require('./colors')
 program
 	.version(version)
 	.option(
-		'-l, --log <seconds>',
-		'continuously log the temperature with intervals <seconds> long'
+		'-l, --log <milliseconds>',
+		'continuously log the temperature with intervals <milliseconds> long'
 	)
 	.option('-c, --color', 'color code the output depending on temperature')
 	.option(
@@ -26,8 +26,8 @@ const convertObjectToFahrenheit = ({ main, cores, max }) => ({
 })
 
 const getTemp = program.fahrenheit
-	? convertObjectToFahrenheit(osxTemp.cpuTemperature())
-	: osxTemp.cpuTemperature()
+	? () => convertObjectToFahrenheit(osxTemp.cpuTemperature())
+	: () => osxTemp.cpuTemperature()
 
 const logWithColor = temps => {
 	const correctLimits = program.fahrenheit ? celsiusToFahrenheit : arg => arg
@@ -40,8 +40,7 @@ const logWithColor = temps => {
 	return console.log(color, temps, reset)
 }
 
-const logTemp = () =>
-	program.color ? logWithColor(getTemp) : console.log(getTemp)
+const logTemp = temp => (program.color ? logWithColor(temp) : console.log(temp))
 
-logTemp()
-if (program.log) setInterval(logTemp, program.log)
+logTemp(getTemp())
+if (program.log) setInterval(() => logTemp(getTemp()), program.log)
