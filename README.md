@@ -34,7 +34,7 @@ yarn add cputemp-macos
 ### Usage
 
 <p align="center">
-	<image src="media/demo.svg">
+	<image src="media/demo.svg" width="80%">
 </p>
 
 ```
