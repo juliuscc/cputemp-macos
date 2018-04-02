@@ -26,9 +26,9 @@ yarn add cputemp-macos
 
 ### Usage
 
-```bash
-temp
-```
+<p align="center">
+	<image src="media/demo.svg">
+</p>
 
 [npm-img]: https://img.shields.io/npm/v/cputemp-macos.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/cputemp-macos
