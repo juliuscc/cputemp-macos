@@ -3,7 +3,9 @@
 	"version": "0.1.0",
 	"description": "A MacOS  shell tool to read or log the cpu temperature 🌡",
 	"main": "index.js",
-	"bin": "index.js",
+	"bin": {
+		"temp": "index.js"
+	},
 	"repository": "git@github.com:juliuscc/macos-cputemp.git",
 	"author": "Julius Recep Colliander Celik <julius.cc@hotmail.com>",
 	"license": "MIT",
@@ -18,6 +20,7 @@
 		"prettier": "^1.11.1"
 	},
 	"dependencies": {
-		"commander": "^2.15.1"
+		"commander": "^2.15.1",
+		"osx-temperature-sensor": "^1.0.1"
 	}
 }
