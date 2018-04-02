@@ -30,6 +30,16 @@ yarn add cputemp-macos
 	<image src="media/demo.svg">
 </p>
 
+    Usage: temp [options]
+
+    Options:
+
+    	-V, --version             output the version number
+    	-l, --log <milliseconds>  continuously log the temperature with intervals <milliseconds> long
+    	-c, --color               color code the output depending on temperature
+    	-f, --fahrenheit          present the temperature using Fahrenheit instead of Celsius
+    	-h, --help                output usage information
+
 [npm-img]: https://img.shields.io/npm/v/cputemp-macos.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/cputemp-macos
 [downloads-img]: https://img.shields.io/npm/dm/cputemp-macos.svg?style=flat-square
