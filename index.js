@@ -3,6 +3,7 @@
 const program = require('commander')
 const { version } = require('./package.json')
 const osxTemp = require('osx-temperature-sensor')
+const { reset, limits } = require('./colors')
 
 program
 	.version(version)
@@ -23,10 +24,24 @@ const convertObjectToFahrenheit = ({ main, cores, max }) => ({
 	cores: cores.map(celsiusToFahrenheit),
 	max: celsiusToFahrenheit(max)
 })
+
 const getTemp = program.fahrenheit
 	? convertObjectToFahrenheit(osxTemp.cpuTemperature())
 	: osxTemp.cpuTemperature()
-const logTemp = () => console.log(getTemp)
+
+const logWithColor = temps => {
+	const correctLimits = program.fahrenheit ? celsiusToFahrenheit : arg => arg
+
+	const color = limits.find(
+		limit =>
+			correctLimits(limit.min) <= temps.main &&
+			correctLimits(limit.max) >= temps.main
+	).color
+	return console.log(color, temps, reset)
+}
+
+const logTemp = () =>
+	program.color ? logWithColor(getTemp) : console.log(getTemp)
 
 logTemp()
 if (program.log) setInterval(logTemp, program.log)
