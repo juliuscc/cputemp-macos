@@ -15,7 +15,10 @@
 	"os": ["darwin"],
 	"scripts": {
 		"precommit": "lint-staged",
-		"postversion": "git push && git push --tags && npm publish"
+		"postversion": "git push && git push --tags && npm publish",
+		"record": "rm -f media/demo.svg && asciinema rec media/demo.svg",
+		"record-to-svg":
+			"cat media/demo.svg | svg-term --out media/demo.svg --window --width=50 --height=20 --term=hyper --profile=Snazzy"
 	},
 	"devDependencies": {
 		"husky": "^0.14.3",
