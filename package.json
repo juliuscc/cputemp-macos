@@ -1,6 +1,6 @@
 {
 	"name": "macos-cputemp",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description":
 		"A MacOS  command line tool to read or log the cpu temperature 🌡",
 	"main": "index.js",
