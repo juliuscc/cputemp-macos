@@ -8,6 +8,28 @@ A MacOS  command line tool to read or log the cpu temperature 🌡
 [![deps status][daviddm-img]][daviddm-url]
 [![MIT license][license-img]][license-url]
 
+## Quickstart
+
+### Instalation
+
+Install cputemp-macos with npm
+
+```bash
+npm install cputemp-macos --save
+```
+
+or with yarn
+
+```bash
+yarn add cputemp-macos
+```
+
+### Usage
+
+```bash
+temp
+```
+
 [npm-img]: https://img.shields.io/npm/v/cputemp-macos.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/cputemp-macos
 [downloads-img]: https://img.shields.io/npm/dm/cputemp-macos.svg?style=flat-square
