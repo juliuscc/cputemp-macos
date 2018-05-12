@@ -11,9 +11,9 @@ A MacOS  command line tool to read or log the cpu temperature 🌡
 ## Features
 
 *   🌡️ Logs mean temperature, max temperature and temperature for every core.
-*   🎨 Color coded output depending on temperature 🔥 ⚡ ❄️
-*   🗽 Both fahrenheit and celsius is available 🇺🇸 ❤️ 🇪🇺
-*   🚀 Continuous logging for monitoring 🖥
+*   :art: Color coded output depending on temperature :fire: :zap: :snowflake:
+*    :statue_of_liberty: Both fahrenheit and celsius is available :us: :heart: 🇪🇺
+*    :rocket: Continuous logging for monitoring 🖥
 
 ## Quickstart
 
@@ -51,7 +51,7 @@ $ temp --help
 
 ## Credits
 
-Written by Julius Celik 🐢 👨‍💻 👌
+Written by Julius Celik :turtle: 👨‍💻 :ok_hand:
 
 ### Contributors
 
